@@ -7,4 +7,14 @@
 
 .not-found {
   font-size: 9rem;
+  color: rgb(199, 85, 85);
+}
+.not-found-wrapper a {
+  color: white;
+}
+.cry {
+  z-index: -1;
+  position: absolute;
+  filter: grayscale(1);
+  transform: scale(2.5);
 }
