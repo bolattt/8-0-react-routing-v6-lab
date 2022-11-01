@@ -14,6 +14,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import NotFound from "./components/notFound/NotFound";
 
 /*
   Data
@@ -40,14 +41,16 @@ function App() {
             element={<Home employees={employees} owners={owners} pets={pets} />}
           ></Route>
           <Route
-            path="/staff"
+            path="staff"
             element={<StaffList employees={employees} />}
           ></Route>
           <Route
-            path="/pets"
-            element={<Navigate replace to="/pets/cats" pets={pets} />}
+            path="pets"
+            element={<Navigate replace to="cats" pets={pets} />}
           ></Route>
           <Route path="pets/:type" element={<PetsList pets={pets} />}></Route>
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
       <Footer />
